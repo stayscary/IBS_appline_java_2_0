@@ -23,6 +23,11 @@ public class SimpleCalculator {
         System.out.print("Введите B: ");
         numberTwo = scanner.nextDouble();
 
+        calc(numberOne, numberTwo, operation);
+    }
+
+    /** Данный метод предназначен для вывода в консоль результата операции над числами */
+    static void calc(double numberOne, double numberTwo, String operation) {
         switch (operation) {
             case "+":
                 System.out.printf("%.4f + %.4f = %.4f", numberOne, numberTwo, numberOne + numberTwo);
@@ -45,4 +50,6 @@ public class SimpleCalculator {
                 break;
         }
     }
+
+
 }
