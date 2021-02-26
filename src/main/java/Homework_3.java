@@ -47,6 +47,7 @@ public class Homework_3 {
             System.out.print(word + " ");
         }
 
+        // Поиск элемента массива с максимальной длинной
         for (int i = 0; i < n; i++) {
             if (array[i].length() > maxLength) {
                 maxLength = array[i].length();
