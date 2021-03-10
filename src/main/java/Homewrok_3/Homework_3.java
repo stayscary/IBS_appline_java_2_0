@@ -1,3 +1,5 @@
+package Homewrok_3;
+
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -76,7 +78,7 @@ public class Homework_3 {
         System.out.print("Введите B: ");
         numberTwo = scanner.nextDouble();
 
-        // Вызов метода calc из класса SimpleCalculator
+        // Вызов метода calc из класса Homewrok_3.SimpleCalculator
         SimpleCalculator.calc(numberOne, numberTwo, operation);
     }
 }

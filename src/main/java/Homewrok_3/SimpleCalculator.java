@@ -1,6 +1,8 @@
+package Homewrok_3;
+
 import java.util.Scanner;
 
-/** SimpleCalculator
+/** Homewrok_3.SimpleCalculator
  * Эта программа предназначена для вычисления арифметических операций чисел,
  * введённых пользователем.
  */
