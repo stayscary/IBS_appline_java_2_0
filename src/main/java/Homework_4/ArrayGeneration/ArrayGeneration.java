@@ -1,45 +1,47 @@
+package Homework_4.ArrayGeneration;
+
 import java.util.Arrays;
 import java.util.Random;
 
-public class Homework_4_1 {
-    public static void main(String[] args) {
+public class ArrayGeneration {
         //1. Массив размерностью 20, заполняется случайными целыми числами от -10 до 10.
         // Найти максимальный отрицательный и минимальный положительный элементы массива.
         // Поменять их местами.
 
         Random random = new Random();
-        int arraySize = 20;
+        final int arraySize = 20;
 
-        int[] primaryArray = new int[arraySize];
+        final int[] primaryArray = new int[arraySize];
 
         int[] maxAndMinArray;
 
         int[] helpArray;
 
-        for (int i = 0; i < primaryArray.length; i++) {
-            primaryArray[i] = random.nextInt(20) - 10;
+        public ArrayGeneration() {
+            for (int i = 0; i < primaryArray.length; i++) {
+                primaryArray[i] = random.nextInt(20) - 10;
+            }
+
+            helpArray = Arrays.copyOf(primaryArray, arraySize);
+
+            // Сортировка вспомогательного массива для упрощения поиска.
+            Arrays.sort(helpArray);
+
+            // Метод проверки вывода
+            checkOutput(primaryArray, helpArray);
+
+            // Метод поиска максимального отрицательного и минимального положительного чисел
+            maxAndMinArray = findMaxAndMin(helpArray);
+
+            // Метод проверки вывода
+            checkOutput(maxAndMinArray);
+
+            // Метод изменения положения чисел в массиве
+            swapArrayMaxAndMinNumbers(primaryArray, maxAndMinArray);
+
+            // Метод проверки вывода
+            checkOutput(primaryArray);
         }
-
-        helpArray = Arrays.copyOf(primaryArray, arraySize);
-
-        // Сортировка вспомогательного массива для упрощения поиска.
-        Arrays.sort(helpArray);
-
-        // Метод проверки вывода
-        checkOutput(primaryArray, helpArray);
-
-        // Метод поиска максимального отрицательного и минимального положительного чисел
-        maxAndMinArray = findMaxAndMin(helpArray);
-
-        // Метод проверки вывода
-        checkOutput(maxAndMinArray);
-
-        // Метод изменения положения чисел в массиве
-        swapArrayMaxAndMinNumbers(primaryArray, maxAndMinArray);
-
-        // Метод проверки вывода
-        checkOutput(primaryArray);
-    }
 
     private static void swapArrayMaxAndMinNumbers(int[] primaryArray, int[] maxAndMinArray) {
         int indexOfMaxNegative = 0;
