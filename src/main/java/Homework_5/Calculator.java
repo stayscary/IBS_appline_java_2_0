@@ -29,7 +29,7 @@ public class Calculator {
 
     public static void control(double firstNumber, double secondNumber, String operation) {
         Operation logicOperation;
-        double result = 0;
+        double result;
         System.out.println("Ответ:");
         switch (operation) {
             case "+":
